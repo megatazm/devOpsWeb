@@ -20,7 +20,9 @@ pipeline {
 		stage ('Deploy to tomcat server'){
 			steps {
 				
-			   bat  'curl -T C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\build-n-deploy\\target\\devOpsWeb.war http://localhost:8181/manager/text/deploy?path=/'
+			  
+			   bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command "Invoke-WebRequest -Uri http://localhost:8181/manager/text/deploy?path=/ -Method PUT -InFile C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\build-n-deploy\\target\\*.war"'
+
 			}
 		}		
 	}
