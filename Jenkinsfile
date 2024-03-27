@@ -21,7 +21,6 @@ pipeline {
 			steps {
 				
 			   bat  'curl -T C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\build-n-deploy\\target\\*.war http://localhost:8181/manager/text/deploy?path=/'
-build-n-deploy\target
 			}
 		}		
 	}
