@@ -21,7 +21,7 @@ pipeline {
 			steps {
 				
 			  
-			   bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command "Invoke-WebRequest -Uri http://localhost:8181/manager/text/deploy?path=/ -Method PUT -InFile C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\build-n-deploy\\target\\\devOpsWeb.war.war"'
+			   bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command "Invoke-WebRequest -Uri http://localhost:8181/manager/text/deploy?path=/ -Method PUT -InFile C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\build-n-deploy\\target\\devOpsWeb.war.war"'
 
 			}
 		}		
