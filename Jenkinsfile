@@ -18,7 +18,9 @@ pipeline {
 			}
 		}
 		stage ('Deploy to tomcat server'){
-			deploy adapters: [tomcat7(path: '', url: 'http://localhost:8181')], contextPath: null, war: '**/*.war'			
+			steps {
+				deploy adapters: [tomcat7(path: '', url: 'http://localhost:8181')], contextPath: null, war: '**/*.war'
+			}
 		}		
 	}
 }
