@@ -19,7 +19,8 @@ pipeline {
 		}
 		stage ('Deploy to tomcat server'){
 			steps {
-				deploy adapters: [tomcat7(path: '', url: 'http://localhost:8181')], contextPath: null, war: '**/*.war'
+				
+				bat 'Invoke-WebRequest -Uri http://localhost:8181/manager/text/deploy?path=/ -Method PUT -InFile **/*.war'
 			}
 		}		
 	}
