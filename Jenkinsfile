@@ -20,7 +20,8 @@ pipeline {
 		stage ('Deploy to tomcat server'){
 			steps {
 				
-				bat 'Invoke-WebRequest -Uri http://localhost:8181/manager/text/deploy?path=/ -Method PUT -InFile **/*.war'
+				bat 'curl -T **/*.war http://localhost:8181/manager/text/deploy?path=/'
+
 			}
 		}		
 	}
