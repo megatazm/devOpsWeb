@@ -20,7 +20,7 @@ pipeline {
 		stage ('Deploy to tomcat server'){
 			steps {
 				
-			   bat 'curl -T C:\ProgramData\Jenkins\.jenkins\workspace\**\*.war http://localhost:8181/manager/text/deploy?path=/'
+			   bat  'curl -T C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\**\\*.war http://localhost:8181/manager/text/deploy?path=/'
 
 			}
 		}		
